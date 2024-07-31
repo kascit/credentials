@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loc Ask</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh;
+        }
+        input[type=button] {
+            width: 400px;
+            height: 200px;
+            font-size: 20px;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 70px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        input[type=button]:hover {
+            background-color: #0f0;
+        }
+        input[type=button]:active {
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="button" value="BigButton" onclick="locPrompt()">
+    </form>
+    <script>
+        function locPrompt(){
+            var location = prompt("What is your location?");
+            if (location.toLowerCase() === 'haryana' || location.toLowerCase() === 'punjab' || location.toLowerCase() === 'chandigarh') {
+                window.location.href = 'btn_popin.html';
+            } else {
+                alert("You are not allowed to enter this site");
+            }
+        }
+    </script>
+</body>
+</html>
